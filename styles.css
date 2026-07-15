@@ -153,6 +153,10 @@ h1 {
   color: var(--muted);
 }
 
+.after-feedback__lead + .after-feedback__lead {
+  margin-top: -12px;
+}
+
 .impact-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -527,7 +531,11 @@ textarea[aria-invalid="true"] { border-color: var(--danger); }
   .intro > p:last-child { font-size: 16px; }
   .after-feedback { margin-bottom: 38px; padding: 24px 0; }
   .after-feedback h2 { font-size: 26px; }
-  .impact-list { grid-template-columns: 1fr; gap: 14px; }
+  .after-feedback__lead + .after-feedback__lead {
+  margin-top: -12px;
+}
+
+.impact-list { grid-template-columns: 1fr; gap: 14px; }
   .impact-item { display: grid; grid-template-columns: 32px 1fr; gap: 8px; }
   .impact-item__number { margin: 2px 0 0; }
   .after-feedback__media img { aspect-ratio: 4 / 3; }
