@@ -14,7 +14,7 @@ function base64ToBytes(value) {
 }
 
 async function decryptReport(password, cacheBust = false) {
-  const suffix = cacheBust ? `?t=${Date.now()}` : "";
+  const suffix = `?t=${Date.now()}`;
   const response = await fetch(`data.enc${suffix}`, { cache: "no-store" });
   if (!response.ok) throw new Error("Не удалось загрузить данные отчёта.");
 
