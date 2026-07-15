@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#0b736b">
+  <title>Управленческий отчёт юридической команды</title>
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="unlock" id="unlock-view" aria-labelledby="unlock-title">
+      <div class="unlock__mark" aria-hidden="true">Ю</div>
+      <p class="eyebrow">Закрытый управленческий отчёт</p>
+      <h1 id="unlock-title">Введите пароль</h1>
+      <p class="unlock__copy">Данные отчёта хранятся в зашифрованном виде и расшифровываются только в этом браузере.</p>
+      <form id="unlock-form">
+        <label for="password">Пароль</label>
+        <div class="unlock__row">
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+          <button type="submit">Открыть отчёт</button>
+        </div>
+        <p class="error" id="unlock-error" role="alert"></p>
+      </form>
+    </section>
+
+    <section class="report is-hidden" id="report-view" aria-live="polite">
+      <header class="report-header">
+        <div>
+          <p class="eyebrow">Юридическая команда</p>
+          <h1>Управленческий отчёт</h1>
+          <p class="report-header__meta" id="report-meta"></p>
+        </div>
+        <div class="report-header__actions">
+          <button class="button button--secondary" type="button" id="refresh-button">Обновить данные</button>
+          <button class="button button--ghost" type="button" id="lock-button">Закрыть</button>
+        </div>
+      </header>
+
+      <div class="status-line">
+        <span id="update-status">Данные загружены</span>
+        <span id="updated-at"></span>
+      </div>
+
+      <section class="report-section" aria-labelledby="summary-title">
+        <div class="section-number">01</div>
+        <div class="section-content">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Управленческое резюме</p>
+              <h2 id="summary-title">Картина периода</h2>
+            </div>
+            <span class="confidence confidence--low" id="overall-confidence"></span>
+          </div>
+          <div class="summary-grid" id="summary-grid"></div>
+          <p class="management-note" id="management-note"></p>
+        </div>
+      </section>
+
+      <section class="report-section" aria-labelledby="scores-title">
+        <div class="section-number">02</div>
+        <div class="section-content">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Оценки</p>
+              <h2 id="scores-title">По юристам и функциям</h2>
+            </div>
+            <span class="scale-note">Шкала 1–10</span>
+          </div>
+          <div class="score-table" id="score-table"></div>
+        </div>
+      </section>
+
+      <section class="report-section" aria-labelledby="insights-title">
+        <div class="section-number">03</div>
+        <div class="section-content">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Подтверждённость</p>
+              <h2 id="insights-title">Инсайты и сигналы</h2>
+            </div>
+          </div>
+          <div class="insights" id="insights"></div>
+          <div class="quality-note" id="quality-note"></div>
+        </div>
+      </section>
+
+      <section class="report-section" aria-labelledby="actions-title">
+        <div class="section-number">04</div>
+        <div class="section-content">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Управленческий фокус</p>
+              <h2 id="actions-title">Решения и контроль</h2>
+            </div>
+          </div>
+          <div class="action-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Приоритет</th>
+                  <th>Действие</th>
+                  <th>Статус</th>
+                  <th>Метрика результата</th>
+                </tr>
+              </thead>
+              <tbody id="actions-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
