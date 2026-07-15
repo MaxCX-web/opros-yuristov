@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#0b736b">
+  <title>Обратная связь по работе юридической команды</title>
+  <meta name="description" content="Анонимная обратная связь по работе юридической команды">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#" aria-label="В начало опроса">
+        <span class="brand__mark" aria-hidden="true">Ю</span>
+        <span>Юридическая команда</span>
+      </a>
+      <span class="privacy-badge">Анонимно</span>
+    </div>
+    <div class="progress" aria-label="Прогресс заполнения">
+      <div class="progress__bar" id="progress-bar"></div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Обратная связь за 2026 год</p>
+      <h1 id="page-title">Помогите сделать совместную работу удобнее</h1>
+      <p>Опрос займёт около 4 минут. Мы не запрашиваем имя или электронную почту.</p>
+    </section>
+
+    <div class="survey-layout">
+      <aside class="survey-meta" aria-label="Информация об опросе">
+        <div class="meta-item">
+          <span class="meta-item__number" id="step-number">01</span>
+          <div>
+            <strong id="step-label">Выбор коллег</strong>
+            <span id="step-count">Шаг 1</span>
+          </div>
+        </div>
+        <p class="meta-note">Оценивайте только тех коллег, с которыми взаимодействовали за последние 6 месяцев.</p>
+      </aside>
+
+      <form id="survey-form" class="survey" novalidate>
+        <section class="step is-active" data-step="selection" aria-labelledby="selection-title">
+          <div class="step-heading">
+            <p class="step-heading__kicker">С кем вы работали?</p>
+            <h2 id="selection-title">Выберите одного или нескольких юристов</h2>
+            <p>Мы покажем только подходящие вопросы. Можно выбрать всех.</p>
+          </div>
+
+          <div class="people-grid" id="people-grid"></div>
+          <p class="field-error" id="selection-error" role="alert"></p>
+
+          <div class="actions actions--end">
+            <button class="button button--primary" type="button" id="start-button">
+              Продолжить
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="step" data-step="person" aria-live="polite"></section>
+
+        <section class="step" data-step="final" aria-labelledby="final-title">
+          <div class="step-heading">
+            <p class="step-heading__kicker">Общий опыт</p>
+            <h2 id="final-title">Осталось немного</h2>
+            <p>Расскажите о сложностях, которые важно учесть в дальнейшей работе.</p>
+          </div>
+
+          <fieldset class="field-group">
+            <legend>Возникали ли сложности во взаимодействии?</legend>
+            <div class="choice-row">
+              <label class="choice-pill">
+                <input type="radio" name="had-difficulty" value="Нет" required>
+                <span>Нет</span>
+              </label>
+              <label class="choice-pill">
+                <input type="radio" name="had-difficulty" value="Да">
+                <span>Да, была сложность</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field is-hidden" id="difficulty-details-wrap">
+            <label for="difficulty-details">Опишите ситуацию и что помогло бы её решить <span class="required">*</span></label>
+            <textarea id="difficulty-details" rows="5" placeholder="Без персональных данных: ситуация, её влияние и желаемый результат"></textarea>
+            <p class="field-error" data-error-for="difficulty-details" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="team-wish">Что ещё юридическая команда могла бы улучшить?</label>
+            <textarea id="team-wish" rows="4" placeholder="Необязательно"></textarea>
+          </div>
+
+          <div class="notice">
+            <strong>Перед отправкой</strong>
+            <p>Пожалуйста, не указывайте в комментариях данные клиентов, номера договоров и другую конфиденциальную информацию.</p>
+          </div>
+
+          <p class="field-error" id="final-error" role="alert"></p>
+          <div class="actions">
+            <button class="button button--secondary" type="button" data-action="back">Назад</button>
+            <button class="button button--primary" type="submit" id="submit-button">
+              <span class="button__label">Отправить ответ</span>
+              <span class="button__spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+        </section>
+
+        <section class="step success" data-step="success" aria-labelledby="success-title">
+          <div class="success__mark" aria-hidden="true">✓</div>
+          <p class="step-heading__kicker">Ответ записан</p>
+          <h2 id="success-title">Спасибо за обратную связь</h2>
+          <p>Результаты будут анализироваться в обобщённом виде вместе с ответами других коллег.</p>
+        </section>
+      </form>
+    </div>
+  </main>
+
+  <form id="google-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdIA1RWvDB-7b70IXJwXFzB1P9AaXheVucf6QjuckvnN6t9wQ/formResponse" method="post" target="submit-frame" hidden></form>
+  <iframe name="submit-frame" id="submit-frame" title="Отправка ответа" hidden></iframe>
+
+  <script src="app.js"></script>
+</body>
+</html>
