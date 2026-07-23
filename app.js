@@ -14,16 +14,9 @@ const people = [
     metrics: ["documents", "comfort", "completeness"]
   },
   {
-    id: "tiokhina",
-    name: "Тиохина Ольга",
-    initials: "ТО",
-    scope: "Документы, совместные задачи и консультации",
-    metrics: ["documents", "comfort", "completeness"]
-  },
-  {
-    id: "gumarova",
-    name: "Гумарова Анна",
-    initials: "ГА",
+    id: "mavricheva",
+    name: "Мавричева Ирина",
+    initials: "МИ",
     scope: "Документы, совместные задачи и консультации",
     metrics: ["documents", "comfort", "completeness"]
   }
@@ -47,20 +40,17 @@ const metricCopy = {
 const googleFields = {
   documents: {
     filatova: "entry.70135648",
-    tiokhina: "entry.1941643990",
-    gumarova: "entry.1279004608"
+    mavricheva: "entry.1279004608"
   },
   comfort: {
     mishukov: "entry.1725982862",
     filatova: "entry.76976019",
-    tiokhina: "entry.1258484562",
-    gumarova: "entry.932387424"
+    mavricheva: "entry.932387424"
   },
   completeness: {
     mishukov: "entry.1832626591",
     filatova: "entry.650491837",
-    tiokhina: "entry.2131589529",
-    gumarova: "entry.1705584364"
+    mavricheva: "entry.1705584364"
   },
   comments: {
     documents: "entry.588539366",
