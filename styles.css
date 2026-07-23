@@ -325,14 +325,18 @@ h1 {
 .metric { margin-bottom: 28px; }
 
 .metric__title {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
+  display: grid;
+  gap: 4px;
   margin-bottom: 10px;
   font-weight: 700;
 }
 
-.metric__title span { color: var(--muted); font-size: 13px; font-weight: 500; }
+.metric__title span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+}
 
 .rating {
   display: grid;
@@ -504,8 +508,8 @@ textarea[aria-invalid="true"] { border-color: var(--danger); }
   .people-grid { grid-template-columns: 1fr; }
   .survey { padding: 24px 16px; }
   .rating { grid-template-columns: repeat(5, 1fr); }
-  .metric__title { display: block; }
-  .metric__title span { display: block; margin-top: 3px; }
+  .metric__title { display: grid; }
+  .metric__title span { display: block; margin-top: 0; }
   .actions { flex-wrap: wrap; }
   .actions .button { flex: 1 1 130px; }
 }
