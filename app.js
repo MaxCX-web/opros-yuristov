@@ -4,7 +4,7 @@ const people = [
     name: "Мишуков Сергей",
     initials: "МС",
     scope: "Совместные задачи и консультации",
-    metrics: ["comfort", "completeness"]
+    metrics: ["documents", "comfort", "completeness"]
   },
   {
     id: "filatova",
@@ -39,6 +39,7 @@ const metricCopy = {
 
 const googleFields = {
   documents: {
+    mishukov: "entry.1941643990",
     filatova: "entry.70135648",
     mavricheva: "entry.1279004608"
   },
