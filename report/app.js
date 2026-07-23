@@ -103,7 +103,7 @@ function renderScores(data) {
           `;
         }).join("")}
       </div>
-      <div class="lawyer-score__average">${lawyer.average.toFixed(1).replace(".", ",")}</div>
+      <div class="lawyer-score__average">${lawyer.average === null ? "—" : lawyer.average.toFixed(1).replace(".", ",")}</div>
     </article>
   `).join("");
 }
