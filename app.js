@@ -39,9 +39,9 @@ const metricCopy = {
 
 const googleFields = {
   documents: {
-    mishukov: "entry.1941643990",
+    mishukov: "entry.1258484562",
     filatova: "entry.70135648",
-    mavricheva: "entry.1279004608"
+    mavricheva: "entry.2131589529"
   },
   comfort: {
     mishukov: "entry.1725982862",
